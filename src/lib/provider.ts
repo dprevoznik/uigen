@@ -76,7 +76,7 @@ export class MockLanguageModel implements LanguageModelV1 {
 
     // Step 1: Create component file
     if (toolMessageCount === 1) {
-      const text = `I'll create a ${componentName} component for you.`;
+      const text = `I'll create a ${componentName} component for you. Let me start by creating the component file.`;
       for (const char of text) {
         yield { type: "text-delta", textDelta: char };
         await this.delay(25);
@@ -107,7 +107,7 @@ export class MockLanguageModel implements LanguageModelV1 {
 
     // Step 2: Enhance component
     if (toolMessageCount === 2) {
-      const text = `Now let me enhance the component with better styling.`;
+      const text = `Now let me enhance the component with better styling. I'm updating the ${componentName} component with improved features.`;
       for (const char of text) {
         yield { type: "text-delta", textDelta: char };
         await this.delay(25);
@@ -139,7 +139,7 @@ export class MockLanguageModel implements LanguageModelV1 {
 
     // Step 3: Create App.jsx
     if (toolMessageCount === 0) {
-      const text = `This is a static response. You can place an Anthropic API key in the .env file to use the Anthropic API for component generation. Let me create an App.jsx file to display the component.`;
+      const text = `This is a static response. You can place an Anthropic API key in the .env file to use the Anthropic API for component generation. Let me create an App.jsx file to display the ${componentName} component.`;
       for (const char of text) {
         yield { type: "text-delta", textDelta: char };
         await this.delay(15);
