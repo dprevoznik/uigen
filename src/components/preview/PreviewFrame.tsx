@@ -151,10 +151,12 @@ export function PreviewFrame() {
   }
 
   return (
-    <iframe
-      ref={iframeRef}
-      className="w-full h-full border-0 bg-white"
-      title="Preview"
-    />
+    <div className="w-full h-full flex items-center justify-center bg-white">
+      <iframe
+        ref={iframeRef}
+        className="w-full h-full border-0 bg-white"
+        title="Preview"
+      />
+    </div>
   );
 }
